@@ -19,3 +19,6 @@ Escolhendo uma tabela com condição para verificar suas colunas
 Com todas as informações necessárias sobre os bancos de dados, tabelas e colunas... sql recuperando os dados da tabela users:
 
 ' UNION (SELECT name, email, password FROM users)-- 
+
+
+https://www.youtube.com/watch?v=RfMvKP6KpCY
